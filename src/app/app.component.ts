@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   public friendTemp
   public friendForm
   public isLoading = false
+  public emailSent = false
   modalRef: BsModalRef;
   iconAdd = icons.faPlusCircle
   iconSort = icons.faRandom
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit {
       .subscribe((res) => {
         this.friends = res
         this.isLoading = false
+        this.emailSent = true
         console.log(res);
       }, (error) => {
         console.log(error);
